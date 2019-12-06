@@ -41,6 +41,6 @@ exec 2> >(tee "stderr.log")
 
 timedatectl set-ntp true
 
-parted --script "${device}" -- mklabel dos \
+parted --script "${device}" -- mklabel msdos \
   mkpart primary ext4 1 100% \
   set 1 boot on
